@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POSITIVE | PCOS Online Support and Information Tool Initiative</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+  <link href="assets/css/theme.min.css" rel="stylesheet" />
+  <link href="assets/css/user.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <style>
+    .nav-link {
+      font-weight: 500;
+      color: #333;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav-link:hover {
+      color: #0e949b;
+    }
+
+    .nav-link.active {
+      background: linear-gradient(90deg, #ff96c4 0%, #0e949b 100%);
+      color: white !important;
+      border-radius: 20px;
+      padding: 6px 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main" id="top">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/icons/Logo.png" height="35" alt="logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav font-base align-items-center">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#Explore">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#Lifestyle">Lifestyle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#Chatbot">Chatbot</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="spacer"></div>
+    <!-- SECTION HOME -->
+    <section class="py-5 py-lg-10" id="Home">
+      <div class="bg-holder bg-size"
+        style="background-image:url(assets/img/illustration/2.png); background-position:right 50px bottom 100px; background-size: 40%; background-repeat:no-repeat;">
+      </div>
+      <div class="container">
+        <div class="row align-items-start h-100 justify-content-center justify-content-lg-start">
+          <div class="col-md-8 col-xxl-5 text-md-start text-center py-2 pt-0" style="margin-top: -30px;">
+            <h1 style="font-size: 4rem; margin-top: -60px; color: #0e949b; white-space: nowrap;">Selamat Datang di POSITIVE!</h1>
+            <h2 style="font-size: 2rem; margin-top: -15px; color: #0e949b; white-space: nowrap;">
+              PCOS Online Support and Information Tool Initiative
+            </h2>
+            <p style="font-size: 1.25rem; text-align: justify; max-width: 100%; margin-right: 1rem; margin-top: 1rem;">
+              Polycystic Ovary Syndrome (PCOS) merupakan gangguan hormonal yang sering dialami oleh perempuan di usia
+              subur yaitu 15 hingga 49 tahun. Gejala umum PCOS meliputi siklus menstruasi yang tidak teratur, jerawat
+              berlebih, pertumbuhan rambut berlebih, kenaikan atau penurunan berat badan secara signifikan, dan masih
+              banyak lagi. PCOS bukan hanya berbicara masalah reproduksi, tetapi juga dapat meningkatkan risiko
+              diabetes, darah tinggi, masalah jantung, dan masalah kesehatan lainnya. Meskipun belum diketahui secara
+              pasti penyebab pastinya, faktor genetik, gaya hidup, dan resistansi insulin berperan dalam penyebab PCOS.
+              Dengan pencegahan dan penanganan dini, gejala PCOS bisa dikelola agar hidup lebih nyaman dan sehat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JS: Highlight Active Navbar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      // Optional: activate based on current URL hash
+      const hash = window.location.hash;
+      if (hash) {
+        const target = document.querySelector(`.nav-link[href="${hash}"]`);
+        if (target) {
+          target.classList.add('active');
+        }
+      }
+    });
+  </script>
+</body>
+
+<!-- SECTION MENGAPA POSITIVE (Layout 2 Kolom Horizontal) -->
+<section id="WhyPositive" style="background-color: #ffffff; padding: 60px 0 60px;">
+  <div class="container">
+    <h2 class="text-center fw-bold" style="font-size: 3rem; color: #0e949b; margin-top: -75px;">Mengapa POSITIVE?</h2>
+
+    <div class="row g-4">
+      <!-- KIRI -->
+      <div class="col-md-6">
+        <!-- Item 1 -->
+        <div class="d-flex align-items-start bg-white rounded-3 shadow-sm p-3 mb-3">
+          <img src="assets/img/icons/medical.png" alt="Informasi Medis" width="40" class="me-3 mt-1">
+          <div>
+            <h6 class="fw-bold mb-1" style="font-size: 1.2rem;">Informasi Medis Terpercaya</h6>
+            <p class="mb-0" style="font-size: 1.05rem;">Akses informasi akurat dari sumber yang telah diverifikasi ahli.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="d-flex align-items-start bg-white rounded-3 shadow-sm p-3 mb-3">
+          <img src="assets/img/icons/chatbot.png" alt="AI Chatbot" width="40" class="me-3 mt-1">
+          <div>
+            <h6 class="fw-bold mb-1" style="font-size: 1.2rem;">AI Chatbot Canggih</h6>
+            <p class="mb-0" style="font-size: 1.05rem;">Menganalisis gejala PCOS dan memberi saran personal.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="d-flex align-items-start bg-white rounded-3 shadow-sm p-3 mb-3">
+          <img src="assets/img/icons/community.png" alt="Komunitas" width="40" class="me-3 mt-1">
+          <div>
+            <h6 class="fw-bold mb-1" style="font-size: 1.2rem;">Dukungan Komunitas</h6>
+            <p class="mb-0" style="font-size: 1.05rem;">Saling berbagi pengalaman dan tips pengelolaan PCOS.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- KANAN -->
+      <div class="col-md-6">
+        <!-- Item 4 -->
+        <div class="d-flex align-items-start bg-white rounded-3 shadow-sm p-3 mb-3">
+          <img src="assets/img/icons/lifestyle.png" alt="Gaya Hidup" width="40" class="me-3 mt-1">
+          <div>
+            <h6 class="fw-bold mb-1" style="font-size: 1.2rem;">Panduan Gaya Hidup</h6>
+            <p class="mb-0" style="font-size: 1.05rem;">Pola makan, olahraga, dan manajemen stres untuk penderita PCOS.</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="d-flex align-items-start bg-white rounded-3 shadow-sm p-3 mb-3">
+          <img src="assets/img/icons/privacy.png" alt="Privasi" width="40" class="me-3 mt-1">
+          <div>
+            <h6 class="fw-bold mb-1" style="font-size: 1.2rem;">Privasi Terjamin</h6>
+            <p class="mb-0" style="font-size: 1.05rem;">Sistem keamanan tinggi menjaga kerahasiaan informasi Anda.</p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="d-flex align-items-start bg-white rounded-3 shadow-sm p-3 mb-3">
+          <img src="assets/img/icons/24 jam.png" alt="Akses 24/7" width="40" class="me-3 mt-1">
+          <div>
+            <h6 class="fw-bold mb-1" style="font-size: 1.2rem;">Akses 24/7</h6>
+            <p class="mb-0" style="font-size: 1.05rem;">Layanan dapat diakses kapan pun, dari mana pun.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION STATISTIK / COUNTER -->
+<section id="Statistik" style="background: linear-gradient(150deg,#ff96c4, #0e949b, #ff96c4); color: white; padding: 60px 0; margin-top: -50px;">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-4 col-md-3 mb-4">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Juta Perempuan<br>Terkena PCOS</p>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <h2 class="counter" data-target="70">0</h2>
+        <p>Persen Tidak<br>Terdianogis</p>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <h2 class="counter" data-target="24">0</h2>
+        <p>Jam Akses<br>Platform</p>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <h2 class="counter" data-target="95">0</h2>
+        <p>Persen Akurasi<br>Deteksi AI</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .counter {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 576px) {
+    .counter {
+      font-size: 2.25rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    const runCounter = () => {
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = Math.ceil(target / speed);
+
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, 30);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    };
+
+    // Trigger only when in viewport
+    const section = document.getElementById('Statistik');
+    const observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          runCounter();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(section);
+  });
+</script>
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <!-- SECTION EXPLORE -->
+<section id="Explore" style="padding-top: 100px; margin-top: -50px;"> 
+  <div class="container">
+    <div class="text-center mb-2">
+      <h2 style="font-size: 3rem; color: #0e949b; white-space: nowrap;" class="fw-bold">UNDERSTAND YOUR BODY, ENJOY YOUR JOURNEY</h2>
+      <p>Menjelajahi penyebab, gejala, dan solusi untuk hidup yang lebih sehat</p>
+    </div>
+
+    <div class="row g-3">
+      <!-- Causes, Diagnose, Symptoms -->
+      <div class="col-md-6 col-lg-4">
+        <a href="CDS.html" style="text-decoration: none; color: inherit;">
+          <div class="p-4 h-100 rounded-4 shadow text-center">
+            <img src="assets/img/icons/satu.png" alt="Causes" style="width:80px;">
+            <h4 class="mt-3">Causes, Diagnosis, & Symptoms</h4>
+            <p>Kenali penyebab, gejala umum, dan cara mendiagnosis PCOS sejak dini.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Fertility -->
+      <div class="col-md-6 col-lg-4">
+        <a href="Fertility.html" style="text-decoration: none; color: inherit;">
+          <div class="p-4 h-100 rounded-4 shadow text-center">
+            <img src="assets/img/icons/dua.png" alt="Fertility" style="width:80px;">
+            <h4 class="mt-3">Fertility</h4>
+            <p>Pelajari bagaimana PCOS memengaruhi kesuburan dan apa yang bisa dilakukan.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Periods -->
+      <div class="col-md-6 col-lg-4">
+        <a href="Periods.html" style="text-decoration: none; color: inherit;">
+          <div class="p-4 h-100 rounded-4 shadow text-center">
+            <img src="assets/img/icons/tiga.png" alt="Periods" style="width:80px;">
+            <h4 class="mt-3">Periods</h4>
+            <p>Pahami siklus menstruasi yang tidak teratur dan bagaimana cara mengaturnya.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Sexual Health and Relationship -->
+      <div class="col-md-6 col-lg-6">
+        <a href="SHR.html" style="text-decoration: none; color: inherit;">
+          <div class="p-4 h-100 rounded-4 shadow text-center">
+            <img src="assets/img/icons/empat.png" alt="Sexual Health" style="width:80px;">
+            <h4 class="mt-3">Sexual Health & Relationship</h4>
+            <p>Ketahui dampak PCOS terhadap hubungan, kepercayaan diri, dan kesehatan seksual.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Management and Treatment -->
+      <div class="col-md-6 col-lg-6">
+        <a href="MT.html" style="text-decoration: none; color: inherit;">
+          <div class="p-4 h-100 rounded-4 shadow text-center">
+            <img src="assets/img/icons/lima.png" alt="Treatment" style="width:80px;">
+            <h4 class="mt-3">Management & Treatment</h4>
+            <p>Temukan cara terbaik untuk mengelola PCOS melalui gaya hidup dan perawatan medis.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- ============================================-->
+      <section id="Lifestyle" style="padding-top: 100px; margin-top: -100px;">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h2 class="fw-bold" style="font-size: 3rem; color: #0e949b; white-space: nowrap;">
+        BUILD A HEALTHIER YOU, DAY BY DAY
+      </h2>
+      <p class="text-muted" style="font-size: 1.1rem;">
+        Jadikan gaya hidup bagian dari pemulihan dan pengelolaan PCOS.
+      </p>
+    </div>
+
+    <!-- Baris 1: Emotional & Diet -->
+    <div class="row justify-content-center g-4 mb-3">
+      <div class="col-md-6">
+        <a href="Emotional Health.html" style="text-decoration: none; color: inherit;">
+          <div class="p-4 rounded-4 shadow text-center h-100 hover-shadow" style="transition: 0.3s;">
+            <img src="assets/img/icons/enam.png" alt="Emotional Health" style="width:60px;">
+            <h5 class="mt-3 fw-bold">Emotional Health</h5>
+            <p class="fs-0">Kelola stres dan suasana hati untuk menjaga keseimbangan hormon secara alami.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="Diet.html" style="text-decoration: none; color: inherit;">
+          <div class="p-4 rounded-4 shadow text-center h-100 hover-shadow" style="transition: 0.3s;">
+            <img src="assets/img/icons/tujuh.png" alt="Diet" style="width:60px;">
+            <h5 class="mt-3 fw-bold">Diet</h5>
+            <p class="fs-0">Temukan pola makan yang tepat untuk menstabilkan insulin dan hormon reproduksi.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Baris 2: Exercise & Daily Lifestyle -->
+    <div class="row justify-content-center g-4">
+      <div class="col-md-6">
+        <a href="Workout.html" style="text-decoration: none; color: inherit;">
+          <div class="p-4 rounded-4 shadow text-center h-100 hover-shadow" style="transition: 0.3s;">
+            <img src="assets/img/icons/delapan.png" alt="Exercise" style="width:60px;">
+            <h5 class="mt-3 fw-bold">Exercise</h5>
+            <p class="fs-0">Rutin bergerak bantu mengatur siklus menstruasi dan meningkatkan energi.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="Daily.html" style="text-decoration: none; color: inherit;">
+          <div class="p-4 rounded-4 shadow text-center h-100 hover-shadow" style="transition: 0.3s;">
+            <img src="assets/img/icons/sembilan.png" alt="Daily Lifestyle" style="width:60px;">
+            <h5 class="mt-3 fw-bold">Daily Lifestyle</h5>
+            <p class="fs-0">Bangun rutinitas positif mulai dari tidur yang cukup hingga manajemen waktu.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-0" id="Chatbot" style="scroll-margin-top: 100px;">
+  <!-- Background illustration on the right -->
+  <div class="bg-holder d-none d-lg-block"
+       style="background-image: url('assets/img/illustration/6.png');
+              background-position: center right 75px;
+              background-repeat: no-repeat;
+              background-size: contain;
+              min-height: 600px;">
+  </div>
+
+  <div class="container py-5">
+    <div class="row align-items-center" style="min-height: 650px;">
+      <!-- Left Side: Text content -->
+      <div class="col-lg-6 d-flex flex-column justify-content-center"> <!-- Tambahkan margin-top di sini -->
+        <h2 class="fw-bold" style="font-size: 3rem; color: #0e949b;">
+          CHATBOT FOR EARLY DETECTION OF PCOS
+        </h2>
+        <!-- Tombol: How to Use -->
+        <div class="d-grid gap-2 mb-4">
+          <a href="howtouse.html" class="btn btn-outline-secondary fw-semibold rounded-pill py-2 px-4">
+            How to Use?
+          </a>
+        </div>
+
+        <!-- Tombol: How it Works -->
+        <div class="d-grid gap-2 mb-4">
+          <a href="How it works.html" class="btn btn-outline-secondary fw-semibold rounded-pill py-2 px-4">
+            How it Works?
+          </a>
+        </div>
+
+
+        <!-- Tombol WhatsApp -->
+        <div class="mt-4">
+          <a href="https://wa.me/6285604758517?text=Halo%2C%20saya%20ingin%20menggunakan%20PCOS%20Bot"
+             target="_blank"
+             class="btn btn-lg px-4 py-2 text-white"
+             style="background-color: #1ba553; border: none;">
+            <i class="fab fa-whatsapp me-2"></i> Chatbot WhatsApp
+          </a>
+          <p class="mt-2 text-muted fs-0">Tersambung langsung ke WhatsApp Anda</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+     <!-- ======= FOOTER ======= -->
+<footer class="pt-5 pb-4" style="background-color: #f0f0f0; margin-top: 50px;">
+  <div class="container">
+    <div class="row text-white">
+      <!-- Logo & Kontak -->
+      <div class="col-md-4 mb-4 text-center text-md-start">
+        <img src="assets/img/icons/Logo.png" alt="POSITIVE" style="width: 120px; margin-bottom: 15px;">
+        <p style="color: #0e949b;">Teknik Biomedik ITS</p>
+        <p style="color: #0e949b;">Email: <a href="mailto:bme@its.ac.id" style="color: #0e949b;">bme@its.ac.id</a></p>
+        <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+          <a href="https://www.linkedin.com/school/institut-teknologi-sepuluh-nopember/" target="_blank" style="color: #0e949b;"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="https://twitter.com/its_campus" target="_blank" style="color: #0e949b;"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="https://www.instagram.com/its_campus/" target="_blank" style="color: #0e949b;"><i class="fab fa-instagram fa-lg"></i></a>
+        </div>
+      </div>
+
+      <!-- Navigasi 1 -->
+      <div class="col-md-2 mb-3">
+        <h6 class="fw-bold" style="color: #0e949b; font-size: 1rem;">Tentang Kami</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://bme.its.ac.id" class="text-decoration-none" style="color: #0e949b;">Profil</a></li>
+          <li><a href="https://bme.its.ac.id/penelitian/" class="text-decoration-none" style="color: #0e949b;">Penelitian</a></li>
+          <li><a href="https://bme.its.ac.id/akademik/" class="text-decoration-none" style="color: #0e949b;">Akademik</a></li>
+        </ul>
+      </div>
+
+      <!-- Navigasi 2 -->
+      <div class="col-md-3 mb-3">
+        <h6 class="fw-bold" style="color: #0e949b; font-size: 1rem;">Informasi Lainnya</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://bme.its.ac.id/kontak/" class="text-decoration-none" style="color: #0e949b;">Hubungi Kami</a></li>
+          <li><a href="https://www.its.ac.id" class="text-decoration-none" style="color: #0e949b;">ITS Surabaya</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center pt-3" style="color: #0e949b;">
+      © 2025 Teknik Biomedik ITS.
+    </div>
+  </div>
+</footer>
+
+      </section>
+    </main><!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/anchorjs/anchor.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="vendors/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="vendors/gsap/customEase.js"></script>
+    <script src="vendors/gsap/scrollToPlugin.js"></script>
+    <!--script(src=`${CWD}vendors/gsap/drawSVGPlugin.js`)-->
+    <script src="assets/js/theme.js"></script>
+  </body>
+
+</html>
