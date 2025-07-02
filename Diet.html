@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POSITIVE | Diet</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fff0 0%, #e8f5e8 100%);
+            border-radius: 30px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="30" r="1.5" fill="%23ff6b6b" opacity="0.1"/><circle cx="80" cy="70" r="1.5" fill="%23ff6b6b" opacity="0.1"/><circle cx="60" cy="20" r="1.5" fill="%23ff6b6b" opacity="0.1"/><circle cx="40" cy="80" r="1.5" fill="%23ff6b6b" opacity="0.1"/></svg>') repeat;
+            animation: floatPattern 28s linear infinite;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 750px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nutrition-overview {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 900px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 2;
+        }
+
+        .macros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .macro-item {
+            text-align: center;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .macro-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+        }
+
+        .macro-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .macro-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .macro-title {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .macro-percentage {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+
+        .macro-description {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .section {
+            margin: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .diet-principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .principle-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .principle-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+        }
+
+        .principle-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-right: 20px;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .card-content {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .card-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .card-content li {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5f8 0%, #ffe8ee 100%);
+            border-left: 5px solid #ff6b6b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .highlight-box h4 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .highlight-box p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .meal-planning {
+            background: linear-gradient(135f, #f8fff0 0%, #e8f5e8 100%);
+            border-radius: 25px;
+            padding: 50px;
+            margin: 60px 0;
+        }
+
+        .meal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .meal-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .meal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .meal-time {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .meal-title {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .meal-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .meal-options {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .meal-options h5 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .option-item:last-child {
+            border-bottom: none;
+        }
+
+        .option-emoji {
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .option-text {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .video-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            border: 2px dashed #dee2e6;
+        }
+
+        .video-placeholder .play-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .video-title {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .video-meta {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .foods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .foods-category {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+
+        .foods-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .category-subtitle {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .foods-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .food-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .food-item:last-child {
+            border-bottom: none;
+        }
+
+        .food-emoji {
+            margin-right: 15px;
+            font-size: 1.3rem;
+        }
+
+        .food-name {
+            color: #333;
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .food-benefit {
+            color: #666;
+            font-size: 0.85rem;
+            margin-left: 10px;
+        }
+
+        .glycemic-index {
+            background: linear-gradient(135deg, #fff5f8 0%, #ffeef8 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .gi-scale {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .gi-bar {
+            flex: 1;
+            height: 30px;
+            border-radius: 15px;
+            background: linear-gradient(to right, #28a745 0%, #ffc107 50%, #dc3545 100%);
+            position: relative;
+            margin: 0 20px;
+        }
+
+        .gi-marker {
+            position: absolute;
+            top: -10px;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .gi-low {
+            left: 20%;
+            color: #28a745;
+        }
+
+        .gi-medium {
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffc107;
+        }
+
+        .gi-high {
+            right: 20%;
+            color: #dc3545;
+        }
+
+        .gi-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .gi-example {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .gi-example h4 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .gi-example.low {
+            border-left: 4px solid #28a745;
+        }
+
+        .gi-example.low h4 {
+            color: #28a745;
+        }
+
+        .gi-example.medium {
+            border-left: 4px solid #ffc107;
+        }
+
+        .gi-example.medium h4 {
+            color: #ffc107;
+        }
+
+        .gi-example.high {
+            border-left: 4px solid #dc3545;
+        }
+
+        .gi-example.high h4 {
+            color: #dc3545;
+        }
+
+        .gi-foods-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .gi-foods-list li {
+            color: #666;
+            padding: 3px 0;
+            font-size: 0.9rem;
+        }
+
+        .supplements-section {
+            margin: 80px 0;
+        }
+
+        .supplements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .supplement-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .supplement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .supplement-image {
+            height: 180px;
+            background: linear-gradient(135deg, #f8fff0, #e8f5e8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #ff6b6b;
+        }
+
+        .supplement-content {
+            padding: 25px;
+        }
+
+        .supplement-title {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .supplement-dosage {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .supplement-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .supplement-benefits {
+            list-style: none;
+            padding: 0;
+        }
+
+        .supplement-benefits li {
+            padding: 5px 0;
+            color: #555;
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .supplement-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .recipes-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 60px 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .recipe-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-image {
+            height: 200px;
+            background: linear-gradient(135deg, #f8fff0, #e8f5e8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #ff6b6b;
+        }
+
+        .recipe-content {
+            padding: 25px;
+        }
+
+        .recipe-title {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .recipe-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .recipe-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .recipe-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .recipe-tag {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .hydration-tracker {
+            background: linear-gradient(135deg, #e6f3ff 0%, #cce7ff 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .water-goals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .water-goal {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .water-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .water-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .water-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .meal-timing {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .timing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .timing-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .timing-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .timing-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .timing-title {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .timing-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .troubleshooting {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+            border: 2px solid #ff6b6b;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 60px 0;
+        }
+
+        .troubleshoot-title {
+            color: #ff6b6b;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .troubleshoot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .troubleshoot-item {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .troubleshoot-item h4 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .troubleshoot-item h4::before {
+            content: '❓';
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+
+        .troubleshoot-item p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .troubleshoot-solution {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+        }
+
+        .troubleshoot-solution h5 {
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .troubleshoot-solution ul {
+            color: #555;
+            padding-left: 20px;
+        }
+
+        .troubleshoot-solution li {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            text-align: center;
+            padding: 60px;
+            border-radius: 25px;
+            margin: 80px 0;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background: white;
+            color: #ff6b6b;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        @keyframes floatPattern {
+            0% { transform: translateX(0px); }
+            100% { transform: translateX(-100px); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .diet-principles {
+                grid-template-columns: 1fr;
+            }
+
+            .macros-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+
+            .meal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>🥗 PCOS Diet & Nutrition</h1>
+            <p>Temukan pola makan yang tepat untuk menstabilkan insulin dan hormon reproduksi. Panduan nutrisi evidence-based untuk mengelola PCOS secara optimal</p>
+            
+            <div class="nutrition-overview">
+                <h3 style="color: #333; margin-bottom: 20px; font-weight: 600; font-size: 1.5rem;">Panduan Makronutrien untuk PCOS</h3>
+                <div class="macros-grid">
+                    <div class="macro-item">
+                        <span class="macro-icon">🍞</span>
+                        <div class="macro-title">Karbohidrat</div>
+                        <div class="macro-percentage">35-45%</div>
+                        <div class="macro-description">Fokus pada complex carbs dengan indeks glikemik rendah</div>
+                    </div>
+                    <div class="macro-item">
+                        <span class="macro-icon">🥩</span>
+                        <div class="macro-title">Protein</div>
+                        <div class="macro-percentage">25-30%</div>
+                        <div class="macro-description">Protein berkualitas tinggi untuk insulin sensitivity</div>
+                    </div>
+                    <div class="macro-item">
+                        <span class="macro-icon">🥑</span>
+                        <div class="macro-title">Lemak Sehat</div>
+                        <div class="macro-percentage">25-30%</div>
+                        <div class="macro-description">Omega-3 dan lemak tak jenuh untuk anti-inflamasi</div>
+                    </div>
+                    <div class="macro-item">
+                        <span class="macro-icon">🥬</span>
+                        <div class="macro-title">Serat</div>
+                        <div class="macro-percentage">25-35g</div>
+                        <div class="macro-description">Serat tinggi untuk kontrol gula darah dan hormone</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diet Principles -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Prinsip Diet PCOS</h2>
+                <p class="section-subtitle">Foundational principles untuk optimizing nutrition dan hormone balance dengan PCOS</p>
+            </div>
+
+            <div class="diet-principles">
+                <div class="principle-card">
+                    <div class="card-header">
+                        <div class="card-icon">📊</div>
+                        <h3 class="card-title">Low Glycemic Index</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Pilih makanan dengan GI rendah untuk menjaga kadar gula darah stabil dan meningkatkan insulin sensitivity.</p>
+                        
+                        <div class="highlight-box">
+                            <h4>Mengapa GI Penting untuk PCOS:</h4>
+                            <p>Makanan GI rendah mengurangi insulin spikes, membantu weight management, dan memperbaiki ovulasi pada PCOS.</p>
+                        </div>
+
+                        <h4 style="color: #333; margin: 20px 0 10px;">Pilihan GI Rendah (<55):</h4>
+                        <ul>
+                            <li>Quinoa, brown rice, oats</li>
+                            <li>Sweet potato, legumes</li>
+                            <li>Apel, berries, pear</li>
+                            <li>Sayuran hijau dan non-starchy vegetables</li>
+                            <li>Nuts dan seeds</li>
+                        </ul>
+
+                        <h4 style="color: #333; margin: 20px 0 10px;">Hindari GI Tinggi (>70):</h4>
+                        <ul>
+                            <li>White bread, white rice</li>
+                            <li>Processed cereals, pastries</li>
+                            <li>Soft drinks, candy</li>
+                            <li>Instant noodles, crackers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="principle-card">
+                    <div class="card-header">
+                        <div class="card-icon">🔥</div>
+                        <h3 class="card-title">Anti-Inflammatory Foods</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>PCOS sering associated dengan chronic inflammation. Anti-inflammatory diet dapat mengurangi symptoms dan memperbaiki metabolic health.</p>
+
+                        <h4 style="color: #333; margin: 20px 0 10px;">Powerful Anti-Inflammatory Foods:</h4>
+                        <ul>
+                            <li>Fatty fish (salmon, mackerel, sardines)</li>
+                            <li>Berries (blueberries, strawberries)</li>
+                            <li>Leafy greens (spinach, kale)</li>
+                            <li>Turmeric, ginger, garlic</li>
+                            <li>Olive oil, avocado</li>
+                            <li>Green tea, teh herbal</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <h4>Inflammatory Foods to Limit:</h4>
+                            <p>Processed foods, refined sugars, trans fats, excessive omega-6 oils, dan alcohol dapat meningkatkan inflammation.</p>
+                        </div>
+
+                        <h4 style="color: #333; margin: 20px 0 10px;">Herbs & Spices:</h4>
+                        <ul>
+                            <li>Cinnamon untuk insulin sensitivity</li>
+                            <li>Spearmint tea untuk androgen reduction</li>
+                            <li>Fenugreek untuk glucose control</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="principle-card">
+                    <div class="card-header">
+                        <div class="card-icon">⚖️</div>
+                        <h3 class="card-title">Portion Control & Timing</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Meal timing dan portion control crucial untuk managing insulin levels dan supporting hormone balance.</p>
+
+                        <h4 style="color: #333; margin: 20px 0 10px;">Optimal Meal Timing:</h4>
+                        <ul>
+                            <li>3 balanced meals + 1-2 healthy snacks</li>
+                            <li>Tidak skip breakfast untuk metabolic stability</li>
+                            <li>Larger meals di pagi hari, lighter di malam</li>
+                            <li>Stop eating 3 jam sebelum tidur</li>
+                            <li>Consistent meal times untuk hormone regulation</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <h4>Plate Method untuk PCOS:</h4>
+                            <p>½ plate vegetables, ¼ lean protein, ¼ complex carbs, plus healthy fats seperti avocado atau nuts.</p>
+                        </div>
+
+                        <h4 style="color: #333; margin: 20px 0 10px;">Portion Guidelines:</h4>
+                        <ul>
+                            <li>Protein: Palm-sized serving</li>
+                            <li>Carbs: Cupped-hand portion</li>
+                            <li>Fats: Thumb-sized amount</li>
+                            <li>Vegetables: Unlimited non-starchy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Glycemic Index Visual Guide -->
+        <div class="glycemic-index">
+            <div class="section-header">
+                <h2 style="color: #333; font-size: 2rem; margin-bottom: 20px;">Panduan Indeks Glikemik</h2>
+                <p style="color: #666; font-size: 1.1rem;">Memahami how different foods affect blood sugar levels</p>
+            </div>
+
+            <div class="gi-scale">
+                <div style="text-align: center;">
+                    <strong>0</strong><br>
+                    <small>Low</small>
+                </div>
+                <div class="gi-bar">
+                    <div class="gi-marker gi-low">Low<br>0-55</div>
+                    <div class="gi-marker gi-medium">Medium<br>56-69</div>
+                    <div class="gi-marker gi-high">High<br>70+</div>
+                </div>
+                <div style="text-align: center;">
+                    <strong>100</strong><br>
+                    <small>High</small>
+                </div>
+            </div>
+
+            <div class="gi-examples">
+                <div class="gi-example low">
+                    <h4>Low GI Foods (Recommended)</h4>
+                    <ul class="gi-foods-list">
+                        <li>🥗 Leafy greens</li>
+                        <li>🥑 Avocado</li>
+                        <li>🥜 Nuts & seeds</li>
+                        <li>🐟 Fish & lean protein</li>
+                        <li>🫘 Legumes & beans</li>
+                        <li>🫐 Berries</li>
+                        <li>🍎 Apples with skin</li>
+                    </ul>
+                </div>
+
+                <div class="gi-example medium">
+                    <h4>Medium GI Foods (Moderate)</h4>
+                    <ul class="gi-foods-list">
+                        <li>🍠 Sweet potato</li>
+                        <li>🍌 Banana (ripe)</li>
+                        <li>🍇 Grapes</li>
+                        <li>🍞 Whole grain bread</li>
+                        <li>🍝 Whole wheat pasta</li>
+                        <li>🥧 Oatmeal (instant)</li>
+                    </ul>
+                </div>
+
+                <div class="gi-example high">
+                    <h4>High GI Foods (Limit/Avoid)</h4>
+                    <ul class="gi-foods-list">
+                        <li>🍞 White bread</li>
+                        <li>🍚 White rice</li>
+                        <li>🥔 French fries</li>
+                        <li>🍪 Cookies & pastries</li>
+                        <li>🥤 Soft drinks</li>
+                        <li>🍭 Candy & sweets</li>
+                        <li>🥣 Sugary cereals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meal Planning -->
+        <div class="meal-planning">
+            <div class="section-header">
+                <h2 class="section-title" style="color: #333;">Sample Meal Plans</h2>
+                <p class="section-subtitle" style="color: #666;">PCOS-friendly meal ideas untuk setiap waktu makan</p>
+            </div>
+
+            <div class="meal-grid">
+                <div class="meal-card">
+                    <div class="meal-time">BREAKFAST</div>
+                    <h3 class="meal-title">Energizing Morning Start</h3>
+                    <p class="meal-description">Protein-rich breakfast untuk stable blood sugar dan sustained energy</p>
+                    <div class="meal-options">
+                        <h5>Healthy Options:</h5>
+                        <div class="option-item">
+                            <span class="option-emoji">🥚</span>
+                            <span class="option-text">Vegetable omelet with spinach + avocado</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🥣</span>
+                            <span class="option-text">Greek yogurt + berries + chia seeds</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🍞</span>
+                            <span class="option-text">Whole grain toast + almond butter</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🥤</span>
+                            <span class="option-text">Protein smoothie with spinach + berries</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-time">LUNCH</div>
+                    <h3 class="meal-title">Balanced Midday Fuel</h3>
+                    <p class="meal-description">Nutrient-dense combinations untuk maintain energy levels</p>
+                    <div class="meal-options">
+                        <h5>Power Lunches:</h5>
+                        <div class="option-item">
+                            <span class="option-emoji">🥗</span>
+                            <span class="option-text">Quinoa salad with grilled chicken</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🐟</span>
+                            <span class="option-text">Salmon + roasted vegetables + brown rice</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🫘</span>
+                            <span class="option-text">Lentil soup + mixed green salad</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🌯</span>
+                            <span class="option-text">Turkey wrap dengan whole grain tortilla</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-time">DINNER</div>
+                    <h3 class="meal-title">Nourishing Evening</h3>
+                    <p class="meal-description">Light but satisfying meals untuk better sleep dan recovery</p>
+                    <div class="meal-options">
+                        <h5>Evening Choices:</h5>
+                        <div class="option-item">
+                            <span class="option-emoji">🍖</span>
+                            <span class="option-text">Lean beef + steamed broccoli + sweet potato</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🍤</span>
+                            <span class="option-text">Shrimp stir-fry with mixed vegetables</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🐔</span>
+                            <span class="option-text">Baked chicken + cauliflower rice</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🥘</span>
+                            <span class="option-text">Tofu curry dengan coconut milk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meal-card">
+                    <div class="meal-time">SNACKS</div>
+                    <h3 class="meal-title">Smart Snacking</h3>
+                    <p class="meal-description">Healthy snacks untuk prevent blood sugar crashes</p>
+                    <div class="meal-options">
+                        <h5>Nutritious Snacks:</h5>
+                        <div class="option-item">
+                            <span class="option-emoji">🥜</span>
+                            <span class="option-text">Mixed nuts + apple slices</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🥒</span>
+                            <span class="option-text">Cucumber + hummus</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🧀</span>
+                            <span class="option-text">Greek yogurt + cinnamon</span>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-emoji">🥕</span>
+                            <span class="option-text">Carrot sticks + almond butter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Best Foods for PCOS -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Best Foods untuk PCOS</h2>
+                <p class="section-subtitle">Nutrient-dense foods yang specifically beneficial untuk PCOS management</p>
+            </div>
+
+            <div class="foods-grid">
+                <div class="foods-category">
+                    <div class="category-header">
+                        <span class="category-icon">🐟</span>
+                        <h3 class="category-title">Protein Berkualitas</h3>
+                        <p class="category-subtitle">Untuk insulin sensitivity & muscle maintenance</p>
+                    </div>
+                    <ul class="foods-list">
+                        <div class="food-item">
+                            <span class="food-emoji">🐟</span>
+                            <span class="food-name">Wild-caught salmon</span>
+                            <span class="food-benefit">Omega-3 tinggi</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🐔</span>
+                            <span class="food-name">Organic chicken breast</span>
+                            <span class="food-benefit">Lean protein</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🥚</span>
+                            <span class="food-name">Pasture-raised eggs</span>
+                            <span class="food-benefit">Complete protein</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🫘</span>
+                            <span class="food-name">Legumes & beans</span>
+                            <span class="food-benefit">Protein + fiber</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🥜</span>
+                            <span class="food-name">Nuts & seeds</span>
+                            <span class="food-benefit">Healthy fats</span>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="foods-category">
+                    <div class="category-header">
+                        <span class="category-icon">🥬</span>
+                        <h3 class="category-title">Sayuran Hijau</h3>
+                        <p class="category-subtitle">Anti-inflammatory & nutrient dense</p>
+                    </div>
+                    <ul class="foods-list">
+                        <div class="food-item">
+                            <span class="food-emoji">🥬</span>
+                            <span class="food-name">Kale</span>
+                            <span class="food-benefit">Vitamin K, folate</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🥬</span>
+                            <span class="food-name">Spinach</span>
+                            <span class="food-benefit">Iron, magnesium</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🥦</span>
+                            <span class="food-name">Broccoli</span>
+                            <span class="food-benefit">Sulforaphane</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🥒</span>
+                            <span class="food-name">Cucumber</span>
+                            <span class="food-benefit">Hydrating, low calorie</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🫑</span>
+                            <span class="food-name">Bell peppers</span>
+                            <span class="food-benefit">Vitamin C, antioxidants</span>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="foods-category">
+                    <div class="category-header">
+                        <span class="category-icon">🫐</span>
+                        <h3 class="category-title">Berries & Fruits</h3>
+                        <p class="category-subtitle">Antioxidants & natural sweetness</p>
+                    </div>
+                    <ul class="foods-list">
+                        <div class="food-item">
+                            <span class="food-emoji">🫐</span>
+                            <span class="food-name">Blueberries</span>
+                            <span class="food-benefit">Anthocyanins</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🍓</span>
+                            <span class="food-name">Strawberries</span>
+                            <span class="food-benefit">Vitamin C, fiber</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🥑</span>
+                            <span class="food-name">Avocado</span>
+                            <span class="food-benefit">Monounsaturated fats</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🍎</span>
+                            <span class="food-name">Green apples</span>
+                            <span class="food-benefit">Pectin fiber</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🍊</span>
+                            <span class="food-name">Citrus fruits</span>
+                            <span class="food-benefit">Vitamin C, folate</span>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="foods-category">
+                    <div class="category-header">
+                        <span class="category-icon">🌾</span>
+                        <h3 class="category-title">Whole Grains</h3>
+                        <p class="category-subtitle">Complex carbs untuk sustained energy</p>
+                    </div>
+                    <ul class="foods-list">
+                        <div class="food-item">
+                            <span class="food-emoji">🌾</span>
+                            <span class="food-name">Quinoa</span>
+                            <span class="food-benefit">Complete protein</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🌾</span>
+                            <span class="food-name">Brown rice</span>
+                            <span class="food-benefit">B vitamins, fiber</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🥣</span>
+                            <span class="food-name">Steel-cut oats</span>
+                            <span class="food-benefit">Beta-glucan fiber</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🌾</span>
+                            <span class="food-name">Buckwheat</span>
+                            <span class="food-benefit">Gluten-free, magnesium</span>
+                        </div>
+                        <div class="food-item">
+                            <span class="food-emoji">🌾</span>
+                            <span class="food-name">Barley</span>
+                            <span class="food-benefit">Soluble fiber</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Videos -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Video Edukasi Nutrisi</h2>
+                <p class="section-subtitle">Expert guidance untuk PCOS nutrition dari registered dietitians</p>
+            </div>
+
+            <div class="diet-principles">
+                <div class="video-section">
+                    <h3 style="color: #333; margin-bottom: 15px; font-weight: 600;">PCOS Diet Fundamentals</h3>
+                    <div class="video-placeholder">
+                        <div class="play-icon">▶</div>
+                        <div class="video-title">The Complete PCOS Nutrition Guide</div>
+                        <div class="video-meta">Amy Medling, PCOS Diva | 18 menit</div>
+                    </div>
+                    <p style="color: #666; line-height: 1.6;"><strong>Content Focus:</strong> Comprehensive overview of PCOS nutrition principles, meal planning strategies, dan practical tips untuk sustainable dietary changes. Covers macronutrient ratios, timing, dan supplement recommendations.</p>
+                </div>
+
+                <div class="video-section">
+                    <h3 style="color: #333; margin-bottom: 15px; font-weight: 600;">Insulin Resistance & Diet</h3>
+                    <div class="video-placeholder">
+                        <div class="play-icon">▶</div>
+                        <div class="video-title">Reversing Insulin Resistance with Food</div>
+                        <div class="video-meta">Dr. Felice Gersh, Integrative Medicine | 22 menit</div>
+                    </div>
+                    <p style="color: #666; line-height: 1.6;"><strong>Expert Insights:</strong> Deep dive into how specific foods affect insulin sensitivity, meal timing strategies, dan evidence-based approaches untuk reversing insulin resistance naturally through nutrition.</p>
+                </div>
+
+                <div class="video-section">
+                    <h3 style="color: #333; margin-bottom: 15px; font-weight: 600;">Anti-Inflammatory Cooking</h3>
+                    <div class="video-placeholder">
+                        <div class="play-icon">▶</div>
+                        <div class="video-title">PCOS-Friendly Meal Prep</div>
+                        <div class="video-meta">Tallene Hacatoryan, PCOS Weight Loss | 15 menit</div>
+                    </div>
+                    <p style="color: #666; line-height: 1.6;"><strong>Practical Cooking:</strong> Step-by-step meal preparation techniques, anti-inflammatory recipes, dan time-saving strategies untuk maintaining PCOS-friendly diet dengan busy lifestyle.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Supplements Section -->
+        <div class="supplements-section">
+            <div class="section-header">
+                <h2 class="section-title">Supplements untuk PCOS</h2>
+                <p class="section-subtitle">Evidence-based supplements yang dapat mendukung PCOS management</p>
+            </div>
+
+            <div class="supplements-grid">
+                <div class="supplement-card">
+                    <div class="supplement-image">💊</div>
+                    <div class="supplement-content">
+                        <h3 class="supplement-title">Inositol (Myo & D-Chiro)</h3>
+                        <div class="supplement-dosage">Dosage: 2-4g myo-inositol + 100-200mg D-chiro daily</div>
+                        <p class="supplement-description">
+                            Gold standard supplement untuk PCOS. Inositol significantly improves insulin sensitivity, reduces androgen levels, dan supports regular ovulation.
+                        </p>
+                        <ul class="supplement-benefits">
+                            <li>Improves insulin sensitivity up to 70%</li>
+                            <li>Reduces testosterone levels</li>
+                            <li>Supports regular menstrual cycles</li>
+                            <li>May improve fertility outcomes</li>
+                            <li>Safe for long-term use</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="supplement-card">
+                    <div class="supplement-image">☀️</div>
+                    <div class="supplement-content">
+                        <h3 class="supplement-title">Vitamin D3</h3>
+                        <div class="supplement-dosage">Dosage: 2000-4000 IU daily (test levels first)</div>
+                        <p class="supplement-description">
+                            Most PCOS women are deficient. Vitamin D deficiency worsens insulin resistance dan inflammation. Supplementation improves multiple PCOS parameters.
+                        </p>
+                        <ul class="supplement-benefits">
+                            <li>Enhances insulin sensitivity</li>
+                            <li>Supports immune function</li>
+                            <li>Improves bone health</li>
+                            <li>May reduce inflammation</li>
+                            <li>Supports mood regulation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="supplement-card">
+                    <div class="supplement-image">🐟</div>
+                    <div class="supplement-content">
+                        <h3 class="supplement-title">Omega-3 Fatty Acids</h3>
+                        <div class="supplement-dosage">Dosage: 1-3g EPA/DHA daily with meals</div>
+                        <p class="supplement-description">
+                            Powerful anti-inflammatory supplement yang reduces chronic inflammation common dalam PCOS. Supports cardiovascular dan metabolic health.
+                        </p>
+                        <ul class="supplement-benefits">
+                            <li>Reduces chronic inflammation</li>
+                            <li>Improves insulin sensitivity</li>
+                            <li>Supports heart health</li>
+                            <li>May reduce androgen levels</li>
+                            <li>Supports brain health & mood</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="supplement-card">
+                    <div class="supplement-image">🌿</div>
+                    <div class="supplement-content">
+                        <h3 class="supplement-title">Spearmint Tea</h3>
+                        <div class="supplement-dosage">Dosage: 2 cups daily (1-2g dried leaves)</div>
+                        <p class="supplement-description">
+                            Natural anti-androgen yang dapat help reduce hirsutism dan acne. Studies show significant reduction dalam free testosterone levels.
+                        </p>
+                        <ul class="supplement-benefits">
+                            <li>Reduces free testosterone</li>
+                            <li>May improve hirsutism</li>
+                            <li>Supports acne reduction</li>
+                            <li>Natural & safe option</li>
+                            <li>Antioxidant properties</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="supplement-card">
+                    <div class="supplement-image">🥄</div>
+                    <div class="supplement-content">
+                        <h3 class="supplement-title">Cinnamon Extract</h3>
+                        <div class="supplement-dosage">Dosage: 500mg-1g daily or 1 tsp ground cinnamon</div>
+                        <p class="supplement-description">
+                            Ceylon cinnamon improves insulin sensitivity dan glucose metabolism. Natural way untuk support blood sugar control.
+                        </p>
+                        <ul class="supplement-benefits">
+                            <li>Improves insulin sensitivity</li>
+                            <li>Supports glucose control</li>
+                            <li>Anti-inflammatory effects</li>
+                            <li>May reduce cravings</li>
+                            <li>Antioxidant properties</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="supplement-card">
+                    <div class="supplement-image">💚</div>
+                    <div class="supplement-content">
+                        <h3 class="supplement-title">Magnesium</h3>
+                        <div class="supplement-dosage">Dosage: 200-400mg daily (glycinate form preferred)</div>
+                        <p class="supplement-description">
+                            Essential mineral yang often deficient dalam PCOS. Supports insulin function, reduces inflammation, dan improves sleep quality.
+                        </p>
+                        <ul class="supplement-benefits">
+                            <li>Improves insulin sensitivity</li>
+                            <li>Reduces chronic inflammation</li>
+                            <li>Supports better sleep</li>
+                            <li>Muscle relaxation & recovery</li>
+                            <li>Stress reduction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #fff5f5; border: 2px solid #ff6b6b; border-radius: 15px; padding: 25px; margin-top: 40px;">
+                <h4 style="color: #ff6b6b; margin-bottom: 15px; text-align: center;">⚠️ Important Supplement Notes</h4>
+                <ul style="color: #666; padding-left: 20px; line-height: 1.7;">
+                    <li>Always consult healthcare provider sebelum starting new supplements</li
