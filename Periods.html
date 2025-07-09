@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POSITIVE | Periods</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe8ee 100%);
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-right: 20px;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .card-content {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .card-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .card-content li {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5f8 0%, #ffe8ee 100%);
+            border-left: 5px solid #ff6b6b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .highlight-box h4 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .highlight-box p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .video-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            border: 2px dashed #dee2e6;
+        }
+
+        .video-placeholder .play-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .video-title {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .video-meta {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .research-section {
+            margin: 80px 0;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .research-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .research-image {
+            height: 180px;
+            background: linear-gradient(135deg, #fff0f5, #ffe1e6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #ff6b6b;
+        }
+
+        .research-content {
+            padding: 25px;
+        }
+
+        .research-title {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .research-summary {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .research-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .journal-name {
+            font-weight: 600;
+            color: #ff6b6b;
+        }
+
+        .timeline-section {
+            margin: 80px 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 50px 0;
+            padding: 0 50px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            text-align: right;
+            padding-right: 50%;
+            padding-left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            text-align: left;
+            padding-left: 50%;
+            padding-right: 0;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            z-index: 2;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .timeline-description {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .info-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .info-title {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .info-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            text-align: center;
+            padding: 60px;
+            border-radius: 25px;
+            margin: 80px 0;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background: white;
+            color: #ff6b6b;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 60px;
+                padding-right: 20px;
+                text-align: left;
+            }
+            
+            .timeline-item:nth-child(odd) {
+                padding-left: 60px;
+                padding-right: 20px;
+                text-align: left;
+            }
+            
+            .timeline-icon {
+                left: 20px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>🩸 PCOS & Menstrual Health</h1>
+            <p>Panduan lengkap memahami bagaimana PCOS mempengaruhi siklus menstruasi, gejala yang dialami, dan cara mengelola periode yang tidak teratur</p>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+            <h2 style="font-size: 2.2rem; color: #333; margin-bottom: 20px; font-weight: 600;">Fakta Penting PCOS & Menstruasi</h2>
+            <p style="color: #666; font-size: 1.1rem; margin-bottom: 40px;">Data penelitian terbaru tentang dampak PCOS terhadap siklus menstruasi</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">85%</span>
+                    <div class="stat-label">Wanita PCOS mengalami menstruasi tidak teratur</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">35+</span>
+                    <div class="stat-label">Hari rata-rata siklus menstruasi PCOS</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">60%</span>
+                    <div class="stat-label">Mengalami amenorrhea (tidak haid)</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">70%</span>
+                    <div class="stat-label">Memiliki gejala PMS yang lebih berat</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Understanding PCOS Periods -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Memahami Menstruasi pada PCOS</h2>
+                <p class="section-subtitle">Bagaimana PCOS mempengaruhi siklus menstruasi normal dan mengapa hal ini terjadi</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="card-header">
+                        <div class="card-icon">🔬</div>
+                        <h3 class="card-title">Hormonal Imbalance</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>PCOS menyebabkan ketidakseimbangan hormon yang mengganggu ovulasi normal, yang mengakibatkan menstruasi menjadi tidak teratur atau bahkan berhenti sama sekali.</p>
+                        
+                        <div class="highlight-box">
+                            <h4>Hormon yang Terganggu:</h4>
+                            <p>LH (Luteinizing Hormone) yang tinggi, FSH rendah, dan peningkatan androgen menciptakan lingkungan hormonal yang tidak mendukung ovulasi regular.</p>
+                        </div>
+
+                        <ul>
+                            <li>Rasio LH:FSH yang tidak normal (>2:1)</li>
+                            <li>Kadar androgen tinggi mengganggu pematangan sel telur</li>
+                            <li>Resistensi insulin memperburuk ketidakseimbangan hormon</li>
+                            <li>Gangguan pada hipotalamus-pituitari-ovarium axis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-header">
+                        <div class="card-icon">📊</div>
+                        <h3 class="card-title">Pola Menstruasi PCOS</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Wanita dengan PCOS dapat mengalami berbagai pola menstruasi yang berbeda dari siklus normal 28 hari.</p>
+
+                        <h4 style="color: #333; margin: 20px 0 10px;">Jenis-jenis Gangguan Menstruasi:</h4>
+                        <ul>
+                            <li><strong>Oligomenorrhea:</strong> Menstruasi jarang (siklus >35 hari)</li>
+                            <li><strong>Amenorrhea:</strong> Tidak menstruasi >3 bulan</li>
+                            <li><strong>Menorrhagia:</strong> Menstruasi berat dan berkepanjangan</li>
+                            <li><strong>Irregular cycles:</strong> Siklus yang tidak dapat diprediksi</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <h4>Siklus Normal vs PCOS:</h4>
+                            <p>Siklus normal: 21-35 hari | PCOS: >35 hari atau tidak teratur, dengan ovulasi yang jarang atau tidak ada sama sekali.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-header">
+                        <div class="card-icon">⚠️</div>
+                        <h3 class="card-title">Gejala dan Tanda</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Selain ketidakteraturan siklus, PCOS juga menyebabkan berbagai gejala yang mempengaruhi kualitas hidup sehari-hari.</p>
+
+                        <h4 style="color: #333; margin: 20px 0 10px;">Gejala Fisik:</h4>
+                        <ul>
+                            <li>Kram perut yang lebih intens</li>
+                            <li>Perdarahan yang sangat berat atau sangat ringan</li>
+                            <li>Pembekuan darah berlebihan</li>
+                            <li>Durasi menstruasi yang tidak normal</li>
+                        </ul>
+
+                        <h4 style="color: #333; margin: 20px 0 10px;">Gejala Emosional:</h4>
+                        <ul>
+                            <li>PMS yang lebih parah</li>
+                            <li>Mood swings ekstrem</li>
+                            <li>Kecemasan dan depresi</li>
+                            <li>Gangguan tidur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Educational Videos Section -->
+<div class="section">
+  <div class="section-header">
+    <h2 class="section-title">Video Edukasi</h2>
+    <p class="section-subtitle">Materi pembelajaran visual dari para ahli reproduksi dan endokrinologi</p>
+  </div>
+
+  <div class="content-grid">
+    <!-- Video 1 -->
+    <div class="video-section">
+      <h3 style="color: #333; margin-bottom: 15px; font-weight: 600;">Understanding PCOS Menstrual Cycle</h3>
+      <div class="video-container" style="margin-bottom: 15px;">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/RMWy9_CQZxc" 
+                title="Understanding PCOS Menstrual Cycle"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+      <p style="color: #666; line-height: 1.6;">
+        Video komprehensif yang menjelaskan mekanisme biologis bagaimana PCOS mengganggu siklus menstruasi normal, mulai dari fase folikular hingga fase luteal, dan dampaknya terhadap ovulasi.
+      </p>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-section">
+      <h3 style="color: #333; margin-bottom: 15px; font-weight: 600;">Managing Heavy Periods with PCOS</h3>
+      <div class="video-container" style="margin-bottom: 15px;">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/rDtpyt6QKRs" 
+                title="Managing Heavy Periods with PCOS"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+      <p style="color: #666; line-height: 1.6;">
+        Panduan praktis untuk mengelola menstruasi yang berat, termasuk pilihan pengobatan, perubahan gaya hidup, dan kapan harus mencari bantuan medis.
+      </p>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-section">
+      <h3 style="color: #333; margin-bottom: 15px; font-weight: 600;">Hormonal Birth Control and PCOS</h3>
+      <div class="video-container" style="margin-bottom: 15px;">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/zuPTyZHf9ao" 
+                title="Hormonal Birth Control and PCOS"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+      <p style="color: #666; line-height: 1.6;">
+        Pembahasan mendalam tentang bagaimana pil KB dan metode kontrasepsi hormonal lainnya dapat membantu mengatur siklus menstruasi pada wanita dengan PCOS.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Treatment Timeline -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Timeline Penanganan Menstruasi PCOS</h2>
+                <p class="section-subtitle">Langkah-langkah sistematis untuk mengelola dan mengatur siklus menstruasi</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">1</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Evaluasi dan Diagnosis (Bulan 1-2)</h3>
+                        <p class="timeline-description">
+                            Pemeriksaan menyeluruh untuk memahami pola menstruasi dan tingkat keparahan PCOS. Termasuk tes darah hormon, USG transvaginal, dan dokumentasi siklus selama 3-6 bulan terakhir. Dokter akan menilai frekuensi, durasi, dan volume menstruasi untuk menentukan strategi pengobatan yang tepat.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">2</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Lifestyle Modification (Bulan 3-6)</h3>
+                        <p class="timeline-description">
+                            Implementasi perubahan gaya hidup sebagai dasar pengobatan. Diet rendah indeks glikemik, olahraga teratur minimal 150 menit per minggu, manajemen stres, dan perbaikan kualitas tidur. Perubahan ini dapat membantu mengatur hormon dan memperbaiki siklus menstruasi secara alami.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">3</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Medical Intervention (Bulan 6-12)</h3>
+                        <p class="timeline-description">
+                            Jika perubahan gaya hidup belum cukup, dokter akan merekomendasikan terapi medis. Pilihan termasuk pil KB kombinasi untuk mengatur siklus, metformin untuk resistensi insulin, atau progestin untuk menginduksi menstruasi. Pemantauan rutin diperlukan untuk menilai respons pengobatan.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">4</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Long-term Management (12+ Bulan)</h3>
+                        <p class="timeline-description">
+                            Pengelolaan jangka panjang dengan monitoring berkala dan penyesuaian pengobatan sesuai kebutuhan. Fokus pada pencegahan komplikasi seperti hiperplasia endometrium, diabetes, dan penyakit kardiovaskular. Evaluasi rutin setiap 3-6 bulan untuk memastikan efektivitas terapi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Management Strategies -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Strategi Pengelolaan</h2>
+                <p class="section-subtitle">Pendekatan komprehensif untuk mengatasi masalah menstruasi PCOS</p>
+            </div>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <span class="info-icon">💊</span>
+                    <h3 class="info-title">Terapi Medis</h3>
+                    <p class="info-description">
+                        Kontrasepsi hormonal untuk mengatur siklus, metformin untuk resistensi insulin, dan terapi hormonal lainnya sesuai indikasi medis. Semua pengobatan harus di bawah supervisi dokter.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-icon">🥗</span>
+                    <h3 class="info-title">Nutrisi Seimbang</h3>
+                    <p class="info-description">
+                        Diet anti-inflamasi dengan indeks glikemik rendah, omega-3, serat tinggi, dan protein berkualitas. Hindari gula olahan dan karbohidrat sederhana yang memperburuk resistensi insulin.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-icon">🏃‍♀️</span>
+                    <h3 class="info-title">Aktivitas Fisik</h3>
+                    <p class="info-description">
+                        Kombinasi kardio dan strength training 150 menit per minggu. Olahraga membantu meningkatkan sensitivitas insulin dan mengatur hormon reproduksi.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-icon">🧘‍♀️</span>
+                    <h3 class="info-title">Manajemen Stres</h3>
+                    <p class="info-description">
+                        Teknik relaksasi, yoga, meditasi, dan tidur berkualitas 7-9 jam per malam. Stres kronis meningkatkan kortisol yang memperburuk ketidakseimbangan hormon.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-icon">📱</span>
+                    <h3 class="info-title">Period Tracking</h3>
+                    <p class="info-description">
+                

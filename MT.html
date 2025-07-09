@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POSITIVE | Management and Treatment</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 30px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="30" cy="30" r="1.5" fill="%23ff6b6b" opacity="0.1"/><circle cx="70" cy="70" r="1.5" fill="%23ff6b6b" opacity="0.1"/><circle cx="70" cy="30" r="1.5" fill="%23ff6b6b" opacity="0.1"/><circle cx="30" cy="70" r="1.5" fill="%23ff6b6b" opacity="0.1"/></svg>') repeat;
+            animation: floatPattern 25s linear infinite;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 750px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .treatment-overview {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 900px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 2;
+        }
+
+        .section {
+            margin: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .treatment-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .pillar-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+        }
+
+        .pillar-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            margin: 0 auto 25px;
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.3);
+        }
+
+        .pillar-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .pillar-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-right: 20px;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .card-content {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .card-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .card-content li {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5f8 0%, #ffe8ee 100%);
+            border-left: 5px solid #ff6b6b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .highlight-box h4 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .highlight-box p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .video-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            border: 2px dashed #dee2e6;
+        }
+
+        .video-placeholder .play-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .video-title {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .video-meta {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .timeline-section {
+            margin: 80px 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 50px 0;
+            padding: 0 50px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            text-align: right;
+            padding-right: 50%;
+            padding-left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            text-align: left;
+            padding-left: 50%;
+            padding-right: 0;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            top: 35px;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            z-index: 2;
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.3);
+        }
+
+        .timeline-title {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .timeline-description {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .timeline-points {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-points li {
+            color: #555;
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .timeline-points li::before {
+            content: '•';
+            color: #ff6b6b;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .medication-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .medication-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+
+        .medication-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .medication-name {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .medication-purpose {
+            color: #ff6b6b;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .medication-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .medication-dosage {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .lifestyle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .lifestyle-card {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+
+        .lifestyle-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .lifestyle-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .lifestyle-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .lifestyle-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .lifestyle-tips {
+            text-align: left;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .research-section {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 25px;
+            padding: 50px;
+            margin: 60px 0;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .research-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .research-image {
+            height: 180px;
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #ff6b6b;
+        }
+
+        .research-content {
+            padding: 25px;
+        }
+
+        .research-title {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .research-summary {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .research-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .journal-name {
+            font-weight: 600;
+            color: #ff6b6b;
+        }
+
+        .success-stories {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 60px 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .story-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: #ff6b6b;
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            opacity: 0.3;
+        }
+
+        .story-text {
+            font-style: italic;
+            color: #555;
+            line-height: 1.7;
+            margin: 30px 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .story-author {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            text-align: center;
+            padding: 60px;
+            border-radius: 25px;
+            margin: 80px 0;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background: white;
+            color: #ff6b6b;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        @keyframes floatPattern {
+            0% { transform: translateX(0px); }
+            100% { transform: translateX(-100px); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 60px;
+                padding-right: 20px;
+                text-align: left;
+            }
+            
+            .timeline-item:nth-child(odd) {
+                padding-left: 60px;
+                padding-right: 20px;
+                text-align: left;
+            }
+            
+            .timeline-icon {
+                left: 20px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .treatment-pillars {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>💊 PCOS Management & Treatment</h1>
+            <p>Temukan cara terbaik untuk mengelola PCOS melalui gaya hidup dan perawatan medis. Panduan komprehensif berdasarkan evidence-based medicine untuk hidup yang lebih sehat</p>
+            
+            <div class="treatment-overview">
+                <h3 style="color: #333; margin-bottom: 20px; font-weight: 600; font-size: 1.5rem;">4 Pilar Utama Pengelolaan PCOS</h3>
+                <p style="color: #666; text-align: center; line-height: 1.7;">
+                    Pengelolaan PCOS yang efektif memerlukan pendekatan holistik yang menggabungkan perubahan gaya hidup, 
+                    terapi medis, dukungan psikologis, dan monitoring berkala untuk hasil yang optimal dan berkelanjutan.
+                </p>
+            </div>
+        </div>
+
+        <!-- Treatment Pillars -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Pilar Pengelolaan PCOS</h2>
+                <p class="section-subtitle">Pendekatan komprehensif untuk mengelola PCOS secara efektif dan berkelanjutan</p>
+            </div>
+
+            <div class="treatment-pillars">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🥗</div>
+                    <h3 class="pillar-title">Lifestyle Modification</h3>
+                    <p class="pillar-description">Perubahan pola makan, aktivitas fisik, dan manajemen stres sebagai fondasi pengobatan PCOS yang efektif.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">💊</div>
+                    <h3 class="pillar-title">Medical Treatment</h3>
+                    <p class="pillar-description">Terapi farmakologis untuk mengatasi gejala spesifik dan mencegah komplikasi jangka panjang.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">🧠</div>
+                    <h3 class="pillar-title">Psychological Support</h3>
+                    <p class="pillar-description">Dukungan mental health untuk mengatasi dampak psikologis PCOS terhadap kualitas hidup.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">📊</div>
+                    <h3 class="pillar-title">Regular Monitoring</h3>
+                    <p class="pillar-description">Pemantauan berkala untuk menilai efektivitas pengobatan dan pencegahan komplikasi.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lifestyle Modifications -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Perubahan Gaya Hidup</h2>
+                <p class="section-subtitle">Strategi evidence-based untuk mengelola PCOS melalui perubahan gaya hidup yang berkelanjutan</p>
+            </div>
+
+            <div class="lifestyle-grid">
+                <div class="lifestyle-card">
+                    <span class="lifestyle-icon">🥗</span>
+                    <h3 class="lifestyle-title">Nutrisi & Diet</h3>
+                    <p class="lifestyle-description">Diet seimbang dengan fokus pada kontrol gula darah dan penurunan inflamasi</p>
+                    <div class="lifestyle-tips">
+                        <h4 style="color: #333; margin-bottom: 10px; font-size: 1.1rem;">Rekomendasi Diet:</h4>
+                        <ul style="color: #666; padding-left: 20px;">
+                            <li>Diet rendah indeks glikemik</li>
+                            <li>Protein berkualitas tinggi 25-30%</li>
+                            <li>Serat 25-35g per hari</li>
+                            <li>Omega-3 fatty acids</li>
+                            <li>Batasi gula olahan dan processed foods</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lifestyle-card">
+                    <span class="lifestyle-icon">🏃‍♀️</span>
+                    <h3 class="lifestyle-title">Aktivitas Fisik</h3>
+                    <p class="lifestyle-description">Program olahraga terstruktur untuk meningkatkan sensitivitas insulin dan menurunkan berat badan</p>
+                    <div class="lifestyle-tips">
+                        <h4 style="color: #333; margin-bottom: 10px; font-size: 1.1rem;">Program Olahraga:</h4>
+                        <ul style="color: #666; padding-left: 20px;">
+                            <li>Kardio 150 menit/minggu intensitas sedang</li>
+                            <li>Strength training 2-3x/minggu</li>
+                            <li>HIIT 2-3x/minggu (optional)</li>
+                            <li>Yoga atau Pilates untuk stress relief</li>
+                            <li>Walking 10,000 langkah/hari</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lifestyle-card">
+                    <span class="lifestyle-icon">😴</span>
+                    <h3 class="lifestyle-title">Manajemen Tidur</h3>
+                    <p class="lifestyle-description">Kualitas tidur yang baik untuk mengatur hormon dan menurunkan stress</p>
+                    <div class="lifestyle-tips">
+                        <h4 style="color: #333; margin-bottom: 10px; font-size: 1.1rem;">Sleep Hygiene:</h4>
+                        <ul style="color: #666; padding-left: 20px;">
+                            <li>Tidur 7-9 jam per malam</li>
+                            <li>Konsisten waktu tidur</li>
+                            <li>Hindari kafein setelah jam 2 siang</li>
+                            <li>Lingkungan tidur yang gelap dan sejuk</li>
+                            <li>Batasi screen time sebelum tidur</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lifestyle-card">
+                    <span class="lifestyle-icon">🧘‍♀️</span>
+                    <h3 class="lifestyle-title">Stress Management</h3>
+                    <p class="lifestyle-description">Teknik relaksasi untuk menurunkan kortisol dan meningkatkan well-being</p>
+                    <div class="lifestyle-tips">
+                        <h4 style="color: #333; margin-bottom: 10px; font-size: 1.1rem;">Teknik Relaksasi:</h4>
+                        <ul style="color: #666; padding-left: 20px;">
+                            <li>Meditasi mindfulness 10-20 menit/hari</li>
+                            <li>Deep breathing exercises</li>
+                            <li>Progressive muscle relaxation</li>
+                            <li>Journaling untuk emotional release</li>
+                            <li>Social support dan counseling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical Treatment Timeline -->
+        <div class="timeline-section">
+            <div class="section-header">
+                <h2 class="section-title">Timeline Pengobatan Medis</h2>
+                <p class="section-subtitle">Tahapan terapi medis yang sistematis berdasarkan tingkat keparahan dan respons pengobatan</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">1</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">First-Line Therapy (Bulan 1-6)</h3>
+                        <p class="timeline-description">
+                            Terapi lini pertama fokus pada lifestyle modification dan metformin sebagai foundational treatment untuk PCOS.
+                        </p>
+                        <ul class="timeline-points">
+                            <li>Metformin 500-2000mg untuk resistensi insulin</li>
+                            <li>Kontrasepsi hormonal untuk mengatur siklus</li>
+                            <li>Topical retinoids untuk acne management</li>
+                            <li>Weight management program terstruktur</li>
+                            <li>Baseline laboratory monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">2</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Second-Line Options (Bulan 6-12)</h3>
+                        <p class="timeline-description">
+                            Jika terapi lini pertama tidak memberikan hasil optimal, dokter akan mempertimbangkan terapi tambahan atau alternatif.
+                        </p>
+                        <ul class="timeline-points">
+                            <li>Spironolactone untuk hirsutism dan acne</li>
+                            <li>Inositol supplementation untuk insulin sensitivity</li>
+                            <li>Clomiphene citrate untuk fertility treatment</li>
+                            <li>GLP-1 agonists untuk weight management</li>
+                            <li>Anti-androgen therapy sesuai indikasi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">3</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Advanced Treatment (Bulan 12-18)</h3>
+                        <p class="timeline-description">
+                            Terapi lanjutan untuk kasus yang resistant atau memerlukan specialized intervention.
+                        </p>
+                        <ul class="timeline-points">
+                            <li>Gonadotropin therapy untuk ovulation induction</li>
+                            <li>Bariatric surgery evaluation untuk severe obesity</li>
+                            <li>IVF consideration untuk fertility issues</li>
+                            <li>Laser therapy untuk hirsutism management</li>
+                            <li>Psychological counseling integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">4</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Long-term Management (18+ Bulan)</h3>
+                        <p class="timeline-description">
+                            Pengelolaan jangka panjang dengan fokus pada maintenance therapy dan pencegahan komplikasi.
+                        </p>
+                        <ul class="timeline-points">
+                            <li>Regular screening untuk diabetes dan CVD</li>
+                            <li>Endometrial surveillance program</li>
+                            <li>Bone health monitoring</li>
+                            <li>Mental health support berkelanjutan</li>
+                            <li>Reproductive planning dan preconception care</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medication Guide -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Panduan Obat-obatan</h2>
+                <p class="section-subtitle">Informasi lengkap tentang medications yang commonly used dalam pengobatan PCOS</p>
+            </div>
+
+            <div class="medication-grid">
+                <div class="medication-card">
+                    <h3 class="medication-name">Metformin</h3>
+                    <div class="medication-purpose">Insulin Sensitizer</div>
+                    <p class="medication-description">
+                        First-line treatment untuk PCOS dengan resistensi insulin. Membantu menurunkan kadar gula darah, memperbaiki ovulasi, dan dapat membantu weight loss.
+                    </p>
+                    <div class="medication-dosage">
+                        <strong>Dosis:</strong> 500-2000mg/hari, dimulai dengan 500mg dan ditingkatkan bertahap. Diminum bersama makanan untuk mengurangi side effects gastrointestinal.
+                    </div>
+                </div>
+
+                <div class="medication-card">
+                    <h3 class="medication-name">Spironolactone</h3>
+                    <div class="medication-purpose">Anti-Androgen</div>
+                    <p class="medication-description">
+                        Efektif untuk mengatasi hirsutism, acne, dan male-pattern hair loss. Bekerja dengan memblokir androgen receptors.
+                    </p>
+                    <div class="medication-dosage">
+                        <strong>Dosis:</strong> 50-200mg/hari. Monitoring elektrolit diperlukan. Kontraindikasi pada kehamilan dan harus dikombinasi dengan kontrasepsi.
+                    </div>
+                </div>
+
+                <div class="medication-card">
+                    <h3 class="medication-name">Kontrasepsi Hormonal</h3>
+                    <div class="medication-purpose">Cycle Regulation</div>
+                    <p class="medication-description">
+                        Mengatur siklus menstruasi, mengurangi androgen levels, dan melindungi endometrium dari hyperplasia.
+                    </p>
+                    <div class="medication-dosage">
+                        <strong>Pilihan:</strong> Combined OCP dengan progestin anti-androgenik (drospirenone, cyproterone acetate). Tidak untuk yang ingin hamil atau memiliki contraindications.
+                    </div>
+                </div>
+
+                <div class="medication-card">
+                    <h3 class="medication-name">Clomiphene Citrate</h3>
+                    <div class="medication-purpose">Ovulation Induction</div>
+                    <p class="medication-description">
+                        First-line fertility treatment untuk menginduksi ovulasi pada wanita PCOS yang ingin hamil.
+                    </p>
+                    <div class="medication-dosage">
+                        <strong>Dosis:</strong> 50-150mg hari ke 3-7 siklus menstruasi. Monitoring ovulasi dengan USG dan hormonal tracking diperlukan.
+                    </div>
+                </div>
+
+                <div class="medication-card">
+                    <h3 class="medication-name">Inositol</h3>
+                    <div class="medication-purpose">Supplement</div>
+                    <p class="medication-description">
+                        Natural supplement yang membantu insulin sensitivity dan dapat memperbaiki ovulasi serta mengurangi androgen levels.
+                    </p>
+                    <div class="medication-dosage">
+                        <strong>Dosis:</strong> Myo-inositol 2-4g/hari atau kombinasi myo-inositol + D-chiro-inositol ratio 40:1. Aman untuk long-term use.
+                    </div>
+                </div>
+
+                <div class="medication-card">
+                    <h3 class="medication-name">Vitamin D</h3>
+                    <div class="medication-purpose">Supplement</div>
+                    <p class="medication-description">
+                        Essential untuk bone health dan dapat membantu insulin sensitivity. Defisiensi vitamin D common pada PCOS.
+                    </p>
+                    <div class="medication-dosage">
+                        <strong>Dosis:</strong> 1000-4000 IU/hari tergantung baseline levels. Target serum 25(OH)D >30 ng/mL (75 nmol/L).
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      <!-- Video Edukasi Treatment -->
+<div class="section">
+    <div class="section-header">
+        <h2 class="section-title">Video Edukasi Treatment</h2>
+        <p class="section-subtitle">Pembelajaran visual dari para ahli tentang strategi pengobatan PCOS yang efektif</p>
+    </div>
+
+    <div class="content-grid">
+        <!-- Video 1 -->
+<div class="video-section">
+    <h3 style="color: #333; margin-bottom: 15px; font-weight: 600;">Metformin dalam Pengelolaan PCOS</h3>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px;">
+        <iframe src="https://www.youtube.com/embed/MivCIKYs8-g" 
+                frameborder="0" 
+                allowfullscreen 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
+    </div>
+    <p style="color: #666; line-height: 1.6;">Penjelasan mendalam tentang mekanisme kerja metformin, strategi pemberian dosis, manajemen efek samping, dan kriteria pemilihan pasien untuk hasil optimal.</p>
+</div>
+
+<!-- Video 2 -->
+<div class="video-section">
+    <h3 style="color: #333; margin-bottom: 15px; font-weight: 600;">Gaya Hidup sebagai Terapi untuk PCOS</h3>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px;">
+        <iframe src="https://www.youtube.com/embed/m5f2NeyOzd0" 
+                frameborder="0" 
+                allowfullscreen 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
+    </div>
+    <p style="color: #666; line-height: 1.6;">Panduan lengkap untuk menerapkan perubahan gaya hidup yang berkelanjutan, termasuk perencanaan makanan, resep olahraga, dan teknik modifikasi perilaku.</p>
+</div>
+
+<!-- Video 3 -->
+<div class="video-section">
+    <h3 style="color: #333; margin-bottom: 15px; font-weight: 600;">Terapi Hormonal untuk PCOS</h3>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px;">
+        <iframe src="https://www.youtube.com/embed/wRHTtckCRwU" 
+                frameborder="0" 
+                allowfullscreen 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
+    </div>
+    <p style="color: #666; line-height: 1.6;">Ikhtisar terapi hormonal termasuk kontrasepsi, anti-androgen, dan obat kesuburan dengan fokus pada pendekatan individual.</p>
+</div>
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

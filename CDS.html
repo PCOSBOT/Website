@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POSITIVE | Causes, Diagnose, Symptoms</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+      padding: 10px 0;
+    }
+
+    .header h1 {
+      font-size: 3.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .header p {
+      font-size: 1.3rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tab-button {
+      background: white;
+      color: #333;
+      border: 2px solid #ddd;
+      padding: 15px 30px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .tab-button:hover {
+      background: #f8f9fa;
+      border-color: #ff96c4;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .tab-button.active {
+      background: linear-gradient(45deg, #ff96c4, #ff96c4);
+      border-color: #ff96c4;
+      box-shadow: 0 10px 30px rgba(255, 150, 196, 0.3);
+    }
+
+    .content-section {
+      display: none;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    #causes .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(45deg, #ff96c4, #ff96c4);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 20px;
+      background: linear-gradient(45deg, #ff96c4, #ff96c4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+      box-shadow: 0 10px 30px rgba(255, 150, 196, 0.3);
+    }
+
+    .card h3 {
+      color: #333;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .card p, .card li {
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2.5rem;
+      }
+
+      .header p {
+        font-size: 1.1rem;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .nav-tabs {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tab-button {
+        width: 80%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+  <div class="spacer"></div>
+  <div class="container">
+    <div class="header">
+      <h2 class="text-center fw-bold" style="font-size: 3rem; color: #0e949b; margin-top: 20px;">Causes, Diagnosis & Symptoms</h2>
+      <p>Memahami PCOS secara menyeluruh untuk pengelolaan yang lebih baik dan hidup yang lebih sehat</p>
+    </div>
+
+    <div class="nav-tabs">
+      <button class="tab-button active" onclick="showTab('causes')">🔬 Causes</button>
+      <button class="tab-button" onclick="showTab('symptoms')">⚠️ Symptoms</button>
+      <button class="tab-button" onclick="showTab('diagnosis')">🩺 Diagnosis</button>
+    </div>
+
+    <!-- === SECTION: CAUSES === -->
+    <div id="causes" class="content-section active">
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">🧬</div>
+          <h3>Hormonal Imbalance</h3>
+          <ul>
+            <li>Kadar androgen tinggi</li>
+            <li>Resistensi insulin</li>
+            <li>Gangguan hormon LH</li>
+            <li>Ketidakseimbangan FSH</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🧪</div>
+          <h3>Insulin Resistance</h3>
+          <ul>
+            <li>Insulin berlebihan</li>
+            <li>Meningkatkan androgen</li>
+            <li>Mengganggu ovulasi</li>
+            <li>Risiko diabetes tipe 2</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🧬</div>
+          <h3>Genetic Factors</h3>
+          <ul>
+            <li>Riwayat keluarga</li>
+            <li>Mutasi genetik</li>
+            <li>Keturunan ibu/saudara</li>
+            <li>Faktor epigenetik</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🍔</div>
+          <h3>Lifestyle Factors</h3>
+          <ul>
+            <li>Diet tinggi gula</li>
+            <li>Kurang olahraga</li>
+            <li>Stres kronis</li>
+            <li>Pola tidur buruk</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+        <div id="symptoms" class="content-section">
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🩸</div>
+                    <h3>Menstrual Irregularities</h3>
+                    <p>Gejala menstruasi yang tidak teratur:</p>
+                    <ul>
+                        <li>Menstruasi tidak teratur atau jarang</li>
+                        <li>Amenorrhea (tidak menstruasi sama sekali)</li>
+                        <li>Menstruasi yang sangat berat atau berkepanjangan</li>
+                        <li>Siklus menstruasi lebih dari 35 hari</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👩</div>
+                    <h3>Hyperandrogenism</h3>
+                    <p>Gejala akibat kadar androgen tinggi:</p>
+                    <ul>
+                        <li>Hirsutism (pertumbuhan rambut berlebih)</li>
+                        <li>Jerawat yang persisten dan parah</li>
+                        <li>Kebotakan pola pria (androgenic alopecia)</li>
+                        <li>Suara yang menjadi lebih dalam</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚖️</div>
+                    <h3>Weight & Metabolic Issues</h3>
+                    <p>Masalah berat badan dan metabolisme:</p>
+                    <ul>
+                        <li>Penambahan berat badan yang sulit dikontrol</li>
+                        <li>Obesitas sentral (lemak di area perut)</li>
+                        <li>Kesulitan menurunkan berat badan</li>
+                        <li>Resistensi insulin dan pre-diabetes</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💔</div>
+                    <h3>Fertility & Reproductive Issues</h3>
+                    <p>Masalah kesuburan dan reproduksi:</p>
+                    <ul>
+                        <li>Kesulitan hamil (infertilitas)</li>
+                        <li>Keguguran berulang</li>
+                        <li>Anovulasi (tidak berovulasi)</li>
+                        <li>Kista ovarium multiple</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">😟</div>
+                    <h3>Psychological Symptoms</h3>
+                    <p>Dampak psikologis dari PCOS:</p>
+                    <ul>
+                        <li>Depresi dan kecemasan</li>
+                        <li>Gangguan mood dan irritabilitas</li>
+                        <li>Penurunan kepercayaan diri</li>
+                        <li>Gangguan body image</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🩹</div>
+                    <h3>Skin Conditions</h3>
+                    <p>Masalah kulit yang sering terjadi:</p>
+                    <ul>
+                        <li>Acanthosis nigricans (kulit gelap di lipatan)</li>
+                        <li>Skin tags (daging tumbuh kecil)</li>
+                        <li>Jerawat hormonal yang parah</li>
+                        <li>Kulit berminyak berlebihan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="diagnosis" class="content-section">
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <h3>Rotterdam Criteria</h3>
+                    <p>Standar diagnosis PCOS berdasarkan 2 dari 3 kriteria:</p>
+                    <ul>
+                        <li>Oligoovulasi atau anovulasi</li>
+                        <li>Tanda klinis atau biokimia hiperandrogen</li>
+                        <li>Morfologi ovarium polisistik pada USG</li>
+                        <li>Menyingkirkan penyebab lain</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🩸</div>
+                    <h3>Hormonal Tests</h3>
+                    <p>Tes darah untuk mengukur kadar hormon:</p>
+                    <ul>
+                        <li>Testosterone total dan bebas</li>
+                        <li>DHEA-S (Dehydroepiandrosterone sulfate)</li>
+                        <li>LH dan FSH ratio</li>
+                        <li>Androstenedione</li>
+                        <li>17-hydroxyprogesterone</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Metabolic Assessment</h3>
+                    <p>Evaluasi kondisi metabolisme:</p>
+                    <ul>
+                        <li>Tes toleransi glukosa oral (OGTT)</li>
+                        <li>Kadar insulin puasa</li>
+                        <li>HbA1c untuk kontrol gula darah</li>
+                        <li>Profil lipid lengkap</li>
+                        <li>HOMA-IR untuk resistensi insulin</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Ultrasound Imaging</h3>
+                    <p>Pemeriksaan USG untuk melihat kondisi ovarium:</p>
+                    <ul>
+                        <li>12 atau lebih folikel kecil per ovarium</li>
+                        <li>Volume ovarium >10 mL</li>
+                        <li>Distribusi folikel di perifer</li>
+                        <li>Stroma ovarium yang menebal</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏥</div>
+                    <h3>Differential Diagnosis</h3>
+                    <p>Menyingkirkan kondisi lain yang mirip:</p>
+                    <ul>
+                        <li>Hiperplasia adrenal kongenital</li>
+                        <li>Tumor penghasil androgen</li>
+                        <li>Sindrom Cushing</li>
+                        <li>Hiperprolaktinemia</li>
+                        <li>Disfungsi tiroid</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📝</div>
+                    <h3>Clinical Assessment</h3>
+                    <p>Evaluasi klinis komprehensif:</p>
+                    <ul>
+                        <li>Riwayat menstruasi detail</li>
+                        <li>Riwayat keluarga PCOS atau diabetes</li>
+                        <li>Pemeriksaan fisik tanda hiperandrogen</li>
+                        <li>Pengukuran BMI dan lingkar pinggang</li>
+                        <li>Evaluasi gejala metabolik</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show selected content section
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Add scroll animations
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const cardVisible = 150;
+                
+                if (cardTop < window.innerHeight - cardVisible) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initialize card animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'all 0.6s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
